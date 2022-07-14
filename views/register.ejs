@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      </head>
+<body>
+
+<h1>Register</h1>
+<% if (messages.error) { %>
+<%= messages.error %>
+<% } %>
+<form action="/register" method="POST">
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" required><br><br>
+  <div class="g-recaptcha" data-sitekey="6LeOi-ggAAAAACUo0pda8Eu0inxxx-Upd87uVgQh"></div>
+  <input type="submit" value="Submit" style="color: white; background-color: dodgerblue;">
+  
+</form> 
+<a href="/login">Login</a>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<h1> Welcome back </h1>
+<%= email %>
+<%= id %>
+<table>
+    <% for(var i=0; i < printUsers.length; i++) { %>
+       <tr>
+         <td><%= printUsers[i].id %></td>
+         <td><%= printUsers[i].email %></td>
+       </tr>
+    <% } %>
+</table>
+<a href="/logout">Logout</a>
